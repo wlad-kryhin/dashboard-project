@@ -1,5 +1,5 @@
 import { NavBar } from "./Components/NavBar";
-import { Dashboard } from "./Components/Dashboard";
+import { Dashboard } from "./Components/Dashboard/Dashboard";
 function App() {
   return (
     <>

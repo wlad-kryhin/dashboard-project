@@ -1,7 +1,7 @@
-export const LastDayColumn = () => {
+export const LastDayColumn = ({ day }) => {
   return (
     <>
-      <div className="days">DAY 67</div>
+      <div className="days">DAY {day} </div>
       <div className="big-column">
         {/* <span className="big-column__wrapper">
       <span className="big-column__desc">GLUTEN FREE DAY</span>

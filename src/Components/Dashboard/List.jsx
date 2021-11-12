@@ -1,3 +1,7 @@
-export const List = ({ children }) => {
-  return <ul className="list">{children}</ul>;
+export const List = ({ children, onClick }) => {
+  return (
+    <ul className="list" onClick={onClick}>
+      {children}
+    </ul>
+  );
 };

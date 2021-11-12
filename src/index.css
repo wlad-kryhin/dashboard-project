@@ -118,11 +118,11 @@ a {
 .list-item:not(:first-child) {
   width: 13%;
 }
-.list-item:not(:first-child):not(:last-child):hover,
+/* .list-item:not(:first-child):not(:last-child):hover,
 .list-item:not(:first-child):not(:last-child):focus {
   border-right: none;
   outline: 2px solid orange;
-}
+} */
 .big-column__desc {
   display: block;
   font-size: 40px;
@@ -139,4 +139,26 @@ a {
 .list-link:focus {
   pointer-events: none;
   outline: 2px solid orange;
+}
+.week-wrapper {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.week-button {
+  padding: 20px 10px;
+  border: 1px solid burlywood;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.week-button:hover,
+.week-button:focus {
+  background-color: orange;
+  color: palegreen;
+}
+.week-name {
+  font-size: 30px;
+  margin: 0 30px;
 }

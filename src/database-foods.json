@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "day": 1,
+    "breakfast": "Scrambled Eggs",
+    "branch": "Blueberry-Banana-Nut Smoothie",
+    "lunch": "Buddha Bowls",
+    "dinner": "Slow-Cooker Split Pea Soup",
+    "supper": "Mediterranean Grilled Chicken Salad",
+    "carb": "LOW-CARB"
+  },
+  {
+    "id": 2,
+    "day": 2,
+    "breakfast": "Smashed Avocado Toast With Egg",
+    "branch": "Milk-Shake",
+    "lunch": "Classic Tuna Melt",
+    "dinner": "Chinese Chicken Mandarin Salad",
+    "supper": "Easy Vegetarian Chili",
+    "carb": "LOW-CARB"
+  },
+  {
+    "id": 3,
+    "day": 3,
+    "breakfast": "Scrambled Eggs",
+    "branch": "Blueberry-Banana-Nut Smoothie",
+    "lunch": "Buddha Bowls",
+    "dinner": "Slow-Cooker Split Pea Soup",
+    "supper": "Mediterranean Grilled Chicken Salad",
+    "carb": "HIGH-CARB"
+  },
+  {
+    "id": 4,
+    "day": 4,
+    "breakfast": "Smashed Avocado Toast With Egg",
+    "branch": "Milk-Shake",
+    "lunch": "Classic Tuna Melt",
+    "dinner": "Chinese Chicken Mandarin Salad",
+    "supper": "Easy Vegetarian Chili",
+    "carb": "HIGH-CARB"
+  },
+  {
+    "id": 5,
+    "day": 5,
+    "breakfast": "Scrambled Eggs",
+    "branch": "Blueberry-Banana-Nut Smoothie",
+    "lunch": "Buddha Bowls",
+    "dinner": "Slow-Cooker Split Pea Soup",
+    "supper": "Mediterranean Grilled Chicken Salad",
+    "carb": "HIGH-CARB"
+  },
+  {
+    "id": 6,
+    "day": 6,
+    "breakfast": "Smashed Avocado Toast With Egg",
+    "branch": "Milk-Shake",
+    "lunch": "Classic Tuna Melt",
+    "dinner": "Chinese Chicken Mandarin Salad",
+    "supper": "Easy Vegetarian Chili",
+    "carb": "LOW-CARB"
+  }
+]

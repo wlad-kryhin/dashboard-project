@@ -4,17 +4,59 @@ import { LastDayColumn } from "./LastDayColumn";
 import { TimeColumn } from "./TimeColumn";
 import { ListItem } from "./ListItem";
 import db from "../../database-foods.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+
+const arrayProgress = [
+  { id: 1, className: "progress__item", number: 1 },
+  { id: 2, className: "progress__item", number: 2 },
+  { id: 3, className: "progress__item", number: 3 },
+  { id: 4, className: "progress__item", number: 4 },
+];
 
 export const Dashboard = () => {
   const [week, setWeek] = useState(1);
   const [data, setData] = useState(db);
+  const [activeIdx, setActiveIdx] = useState(null);
+  const [progress, setProgress] = useState(arrayProgress);
+  const [isClicked, setIsClicked] = useState(true);
+
   let newDay = 0;
   data.forEach((day) => {
     newDay = day.day + 1;
     return;
   });
+
+  useEffect(() => {
+    const newProgress = progress.map((el) => {
+      if (el.number < week) {
+        return { ...el, className: "progress__item" };
+      }
+      if (el.number === week) {
+        return { ...el, className: "progress__item-active" };
+      } else {
+        return { ...el, className: "progress__item-non-active" };
+      }
+    });
+    console.log(newProgress);
+    setProgress(newProgress);
+  }, [week]);
+
+  const click = (e, idx) => {
+    console.log(e.target);
+    if (e.target.nodeName !== "LI") {
+      setActiveIdx(null);
+    }
+    setActiveIdx(idx);
+  };
+
+  const makeOptionsClassName = (index) => {
+    const optionClasses = ["list-item"];
+    if (index === activeIdx) {
+      optionClasses.push("list-item__active");
+    }
+    return optionClasses.join(" ");
+  };
 
   const increment = () => {
     if (week <= 3) {
@@ -26,6 +68,7 @@ export const Dashboard = () => {
           return day;
         }),
       );
+      setActiveIdx(null);
     }
   };
   const decrement = () => {
@@ -38,11 +81,8 @@ export const Dashboard = () => {
           return day;
         }),
       );
+      setActiveIdx(null);
     }
-  };
-
-  const handleClick = (e) => {
-    e.currentTarget.style.outline = "1px solid orange";
   };
 
   return (
@@ -57,17 +97,25 @@ export const Dashboard = () => {
         </button>
       </div>
       <div className="dashboard-wrapper">
+        <ul>
+          {progress.map((el) => {
+            return <li className={el.className} key={el.id}></li>;
+          })}
+        </ul>
         <List>
           <ListItem>
             <TimeColumn />
           </ListItem>
+
           {data.map(
             ({ day, breakfast, branch, lunch, dinner, supper, carb, id }) => {
               return (
                 <li
                   key={id}
-                  className="list-item"
-                  onClick={handleClick}
+                  className={
+                    isClicked ? "list-item" : " list-item list-item__active"
+                  }
+                  onClick={() => setIsClicked(!isClicked)}
                   id={id}
                 >
                   <div className="days">DAY {day}</div>

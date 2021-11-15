@@ -160,21 +160,47 @@ a {
 .list-item__active {
   outline: 2px solid orange;
 }
+.progress-list,
+.dishes-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .progress__item {
   width: 20px;
   height: 20px;
-  background-color: blue;
+  background-color: green;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress__item,
+.progress__item-active,
+.progress__item-non-active {
+  margin-right: 5px;
 }
 .progress__item-active {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .progress__item-non-active {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.week-progress__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

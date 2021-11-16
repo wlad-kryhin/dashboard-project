@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { UserProfile } from "./UserProfile";
+import { NavLink } from "react-router-dom";
 const Header = styled.header`
   width: 100%;
   background-color: #ffffff;
@@ -48,13 +49,15 @@ export const NavBar = () => {
       <Navigation>
         <NavigationList>
           <NavigationItem>
-            <NavigationLink href="">Dashboard</NavigationLink>
+            <NavLink to="/" className="link" activeClassName="link-active">
+              Dashboard
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink href="">Recipes</NavigationLink>
+            <NavLink to="/recipes" className="link" activeClassName="link-active">Recipes</NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink href="">Challenge</NavigationLink>
+            <NavLink to="/challenge" className="link" activeClassName="link-active">Challenge</NavLink>
           </NavigationItem>
         </NavigationList>
       </Navigation>

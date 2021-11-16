@@ -14,12 +14,14 @@ const arrayProgress = [
   { id: 2, className: "progress__item", order: 2 },
   { id: 3, className: "progress__item", order: 3 },
   { id: 4, className: "progress__item", order: 4 },
+  { id: 5, className: "progress__item", order: 5 },
+  { id: 6, className: "progress__item", order: 6 },
+  { id: 7, className: "progress__item", order: 7 },
 ];
 
 export const Dashboard = () => {
   const [week, setWeek] = useState(1);
   const [data, setData] = useState(db);
-  // const [activeIdx, setActiveIdx] = useState(null);
   const [progress, setProgress] = useState(arrayProgress);
 
   let newDay = 0;
@@ -42,22 +44,6 @@ export const Dashboard = () => {
 
     setProgress(newProgress);
   }, [week]);
-
-  // const click = (e, idx) => {
-  //   console.log(e.target);
-  //   if (e.target.nodeName !== "LI") {
-  //     setActiveIdx(null);
-  //   }
-  //   setActiveIdx(idx);
-  // };
-
-  // const makeOptionsClassName = (index) => {
-  //   const optionClasses = ["list-item"];
-  //   if (index === activeIdx) {
-  //     optionClasses.push("list-item__active");
-  //   }
-  //   return optionClasses.join(" ");
-  // };
 
   const increment = () => {
     if (week <= 3) {

@@ -35,9 +35,24 @@ ol {
 a {
   text-decoration: none;
 }
+.link {
+  color: grey;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 10px 5px;
+}
+.link:hover,
+.link:focus {
+  color: orange;
+}
+.link-active {
+  color: orange;
+  border-bottom: 1px solid orange;
+}
 .list {
   width: 1000px;
-  margin-top: 30px;
+  margin: 50px 0;
   display: flex;
   -webkit-box-shadow: 0px 3px 38px -7px rgba(90, 91, 104, 0.3);
   -moz-box-shadow: 0px 3px 38px -7px rgba(90, 91, 104, 0.3);
@@ -63,6 +78,15 @@ a {
   color: greenyellow;
   border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
 }
+.days-active {
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  height: 10%;
+  color: orange;
+  border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
+}
 .clock {
   background-color: rgba(4, 9, 28, 0.06);
 }
@@ -78,6 +102,9 @@ a {
   padding: 5px;
   height: 5%;
   background-color: rgba(4, 9, 28, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .border-top {
   border-top: 0.5px solid rgba(5, 7, 6, 0.099);
@@ -92,17 +119,21 @@ a {
   border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
 }
 .big-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
   height: 80%;
   font-weight: 700;
+  position: relative;
 }
 .print {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   height: 10%;
   background-color: rgba(4, 9, 28, 0.06);
+}
+.print-desc {
+  margin-left: 5px;
 }
 .dashboard-wrapper {
   display: flex;
@@ -124,9 +155,13 @@ a {
   outline: 2px solid orange;
 } */
 .big-column__desc {
-  display: block;
+  position: absolute;
+  color: lightgray;
   font-size: 40px;
   line-height: 40px;
+  width: 500px;
+  top: 127px;
+  left: -184px;
   transform: rotate(-90deg);
 }
 .big-column__wrapper {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CenterTable } from "./CenterTable";
 import { IoIosRestaurant } from "react-icons/io";
+
 export const ColumnItem = ({ data }) => {
   const [isClicked, setIsClicked] = useState(false);
   return (
@@ -21,7 +22,7 @@ export const ColumnItem = ({ data }) => {
       />
       <div className="last">{data.carb}</div>
       <div className="last border-top">
-        <IoIosRestaurant />
+        {isClicked ? <IoIosRestaurant color="orange" /> : <IoIosRestaurant />}
       </div>
     </li>
   );

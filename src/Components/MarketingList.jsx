@@ -1,16 +1,28 @@
 import { HiChevronRight } from "react-icons/hi";
 import styled from "styled-components";
+import { DiApple, DiAndroid } from "react-icons/di";
 const List = styled.ul`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;
 const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 300px;
-  &:not(:last-child) {
-    margin-right: 40px;
-    border-right: 1px solid gray;
+  margin-bottom: 30px;
+  @media screen and (min-width: 800px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 40px;
+      border-right: 1px solid gray;
+    }
   }
 `;
 
@@ -29,12 +41,13 @@ const ListDescription = styled.p`
   max-width: 250px;
 `;
 const ListButton = styled.button`
-  padding: 8px 12px;
+  padding: 10px 20px;
   background-color: transparent;
   border-radius: 10px;
-  border: 1px solid orange;
+  border: 1px solid grey;
   color: black;
   display: flex;
+
   align-items: center;
   justify-content: center;
   margin-right: 20px;
@@ -42,7 +55,7 @@ const ListButton = styled.button`
   &:focus {
     color: white;
     background-color: grey;
-    border: 1px dashed green;
+    border: 1px solid orange;
   }
 `;
 
@@ -51,31 +64,36 @@ const ButtonWrapper = styled.div`
   align-items: center;
   width: 100%;
 `;
+const ButtonDesc = styled.span`
+  margin: 0 5px;
+`;
 export const MarketingList = () => {
   return (
     <List>
       <ListItem>
         <ListTitle>Running out the product?</ListTitle>
         <ListDescription>
-          I want to work in getResponse I want to work in getResponse
+          Peel the onion and roughly chop with the mushrooms.
         </ListDescription>
         <ListButton>
-          <span>to interview</span>
+          <ButtonDesc>Buy now</ButtonDesc>
           <HiChevronRight />
         </ListButton>
       </ListItem>
       <ListItem>
-        <ListTitle>What is your goal?</ListTitle>
+        <ListTitle>Trainer your pocket</ListTitle>
         <ListDescription>
-          I want to work in getResponse I want to work in getResponse
+          Peel the onion and roughly chop with the mushrooms.
         </ListDescription>
         <ButtonWrapper>
           <ListButton>
-            <span>to interview</span>
+            <DiApple />
+            <ButtonDesc>IOS</ButtonDesc>
             <HiChevronRight />
           </ListButton>
           <ListButton>
-            <span>to interview</span>
+            <DiAndroid />
+            <ButtonDesc>Android</ButtonDesc>
             <HiChevronRight />
           </ListButton>
         </ButtonWrapper>
@@ -83,10 +101,11 @@ export const MarketingList = () => {
       <ListItem>
         <ListTitle>What do you want?</ListTitle>
         <ListDescription>
-          I want to work in getResponse I want to work in getResponse
+          {" "}
+          Peel the onion and roughly chop with the mushrooms.
         </ListDescription>
         <ListButton>
-          <span>to interview</span>
+          <ButtonDesc>ReadFaq</ButtonDesc>
           <HiChevronRight />
         </ListButton>
       </ListItem>

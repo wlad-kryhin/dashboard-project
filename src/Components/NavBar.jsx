@@ -27,21 +27,21 @@ const NavigationItem = styled.li`
     margin-right: 40px;
   }
 `;
-const NavigationLink = styled.a`
-  color: grey;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 16px;
-  padding: 10px 5px;
-  &:hover,
-  &:focus {
-    color: orange;
-  }
-  &:active {
-    color: orange;
-    border-bottom: 1px solid orange;
-  }
-`;
+// const NavigationLink = styled.a`
+//   color: grey;
+//   font-size: 25px;
+//   font-weight: 400;
+//   line-height: 16px;
+//   padding: 10px 5px;
+//   &:hover,
+//   &:focus {
+//     color: orange;
+//   }
+//   &:active {
+//     color: orange;
+//     border-bottom: 1px solid orange;
+//   }
+// `;
 
 export const NavBar = () => {
   return (
@@ -49,15 +49,34 @@ export const NavBar = () => {
       <Navigation>
         <NavigationList>
           <NavigationItem>
-            <NavLink to="/" className="link" activeClassName="link-active">
+            <NavLink
+              to="/"
+              className="link"
+              activeClassName="link-active"
+              exact
+            >
               Dashboard
             </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to="/recipes" className="link" activeClassName="link-active">Recipes</NavLink>
+            <NavLink
+              to="/recipes"
+              className="link"
+              activeClassName="link-active"
+              exact
+            >
+              Recipes
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to="/challenge" className="link" activeClassName="link-active">Challenge</NavLink>
+            <NavLink
+              to="/challenge"
+              className="link"
+              activeClassName="link-active"
+              exact
+            >
+              Challenge
+            </NavLink>
           </NavigationItem>
         </NavigationList>
       </Navigation>

@@ -65,7 +65,7 @@ a {
 }
 
 .first {
-  padding: 10px;
+  padding: 80px 10px 10px 10px;
   height: 26%;
   border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
 }
@@ -87,14 +87,7 @@ a {
   color: orange;
   border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
 }
-.clock {
-  background-color: rgba(4, 9, 28, 0.06);
-}
-.middle-time {
-  padding: 10px;
-  height: 16%;
-  border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
-}
+
 .border-bottom-none {
   border-bottom: none;
 }
@@ -109,37 +102,13 @@ a {
 .border-top {
   border-top: 0.5px solid rgba(5, 7, 6, 0.099);
 }
-.last-time {
-  padding: 10px;
-  height: 21%;
-}
+
 .center-table {
   padding: 10px;
   height: 16%;
   border-bottom: 0.5px solid rgba(5, 7, 6, 0.099);
 }
-.big-column {
-  padding: 30px;
-  height: 80%;
-  font-weight: 700;
-  position: relative;
-}
-.print {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  height: 10%;
-  background-color: rgba(4, 9, 28, 0.06);
-}
-.print-desc {
-  margin-left: 5px;
-}
-.dashboard-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .list-item:first-child {
   width: 9%;
 }
@@ -149,93 +118,7 @@ a {
 .list-item:not(:first-child) {
   width: 13%;
 }
-/* .list-item:not(:first-child):not(:last-child):hover,
-.list-item:not(:first-child):not(:last-child):focus {
-  border-right: none;
-  outline: 2px solid orange;
-} */
-.big-column__desc {
-  position: absolute;
-  color: lightgray;
-  font-size: 40px;
-  line-height: 40px;
-  width: 500px;
-  top: 127px;
-  left: -184px;
-  transform: rotate(-90deg);
-}
-.big-column__wrapper {
-  width: 400px;
-}
-.list-link {
-  width: 100%;
-  height: 100%;
-}
-.week-wrapper {
-  padding-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.week-button {
-  padding: 20px 10px;
-  border: 1px solid burlywood;
-  border-radius: 10px;
-  background-color: transparent;
-}
-.week-button:hover,
-.week-button:focus {
-  background-color: orange;
-  color: palegreen;
-}
-.week-name {
-  font-size: 30px;
-  margin: 0 30px;
-}
+
 .list-item__active {
   outline: 2px solid orange;
-}
-.progress-list,
-.dishes-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.progress__item {
-  width: 20px;
-  height: 20px;
-  background-color: green;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.progress__item,
-.progress__item-active,
-.progress__item-non-active {
-  margin-right: 5px;
-}
-.progress__item-active {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: orange;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.progress__item-non-active {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.week-progress__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
